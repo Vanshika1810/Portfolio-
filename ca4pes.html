@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanshika | Cybersecurity Enthusiast</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin: 0.5rem;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--secondary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--secondary-color);
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .about-img {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .skill-category {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .skill-category h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .skill-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-item img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-item p {
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .internship {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .internship-img {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .internship-img img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .internship-details {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .internship-details h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .internship-details .company {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .project-card:hover .project-img img {
+            transform: scale(1.1);
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .project-info p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .project-links a {
+            margin-right: 1rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .certification-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .certification-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .certification-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .certification-info {
+            padding: 1.5rem;
+        }
+
+        .certification-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .certification-info p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .achievement-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .achievement-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .achievement-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .achievement-card p {
+            color: #666;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .social-links {
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--primary-color);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: left 0.3s;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h2 {
+                font-size: 1.2rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Education Section */
+.education-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.education-img {
+    flex: 1;
+    min-width: 200px;
+}
+
+.education-img img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.education-details {
+    flex: 3;
+    min-width: 300px;
+}
+
+.education-details h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.institute {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.duration {
+    display: block;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 1rem;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Vanshika<span>.</span></a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#internship">Internship</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm Vanshika</h1>
+                <h2>Cybersecurity Enthusiast | Pen Tester | Developer</h2>
+                <div class="hero-btns">
+                   
+                    <a href="https://drive.google.com/file/d/1-DDG1H8NWPY_tcbxu-H4_J5uuWPD2DD7/view?usp=sharing" class="btn" id="download-cv">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="mine_pic.jpg" alt="Vanshika">
+                </div>
+                <div class="about-text">
+                    <h3>Cybersecurity Enthusiast & Developer</h3>
+                    <p>I'm a passionate BTech Computer Science student with a strong interest in cybersecurity. My journey in technology began with programming and has evolved into a deep fascination with securing digital systems and networks.</p>
+                    <p>With hands-on experience in various programming languages and cybersecurity tools, I'm constantly learning and expanding my skill set to stay ahead in this rapidly evolving field.</p>
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+                        <!-- ======= Education Section ======= -->
+<section id="education" class="education">
+    <div class="container">
+        <div class="section-title">
+            <h2>Education</h2>
+        </div>
+        <div class="education-item">
+            <div class="education-img">
+                <img src="lpu.jpeg" alt="College Logo">
+            </div>
+            <div class="education-details">
+                <h3>Bachelor of Technology in Computer Science</h3>
+                <span class="institute">Lovely Professional University</span>
+                <span class="duration">2022 - 2026 - (7.26 CGPA)</span>
+                <p>
+                    Relevant coursework: Data Structures, Algorithms, Cloud Computing, Cybersecurity, Database Management, Operating System, Netwoking Fundamentals.
+                </p>
+            </div>
+        </div>
+
+        <div class="education-item">
+            <div class="education-img">
+                <img src="k v 2.png" alt="College Logo">
+            </div>
+            <div class="education-details">
+                <h3>Class 12th </h3>
+                <span class="institute">Kendriya Vidhyalaya Dalhousie</span>
+                <span class="duration">2020 - 2021 - (89.4%)</span>
+                <p>
+                    Relevant coursework: Physics, Chemistry, Maths, Computer Science.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>Skills</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java">
+                            <p>Java</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="C++">
+                            <p>C++</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python">
+                            <p>Python</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174854.png" alt="HTML">
+                            <p>HTML</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS">
+                            <p>CSS</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript">
+                            <p>JavaScript</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Cyber security And AI </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="https://www.kali.org/images/kali-logo.svg" alt="Kali Linux">
+                            <p>Kali Linux</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <img src="https://nmap.org/images/sitelogo-nmap.svg" alt="Nmap">
+                            <p>Nmap</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="burpsuite.png" alt="Burp Suite">
+                            <p>Burp Suite</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://owasp.org/assets/images/logo.png" alt="OWASP">
+                            <p>OWASP</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <img src="gen ai.png" alt="Burp Suite">
+                            <p>Generative AI</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="prompt.png" alt="OWASP">
+                            <p>Prompt Engineering</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS">
+                            <p>AWS Cloud</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://tryhackme.com/img/favicon.png" alt="TryHackMe">
+                            <p>TryHackMe</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="portswigger.png" alt="PortSwigger">
+                            <p>PortSwigger</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="leetcode.png" alt="PortSwigger">
+                            <p>LeetCode</p>
+                        </div>
+                    </div>
+                </div>
+
+               
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="internship" class="internship-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Internship And Training</h2>
+            </div>
+            <div class="internship">
+                <div class="internship-img">
+                    <img src="shadowfox.jpg" alt="Cybersecurity Internship">
+                </div>
+                <div class="internship-details">
+                    <h3>Cybersecurity Intern</h3>
+                    <span class="company">Shadow Fox</span>
+                    <p>During my 1-month internship at Shadow Fox, I gained hands-on experience in various cybersecurity domains including vulnerability assessment, penetration testing, and security monitoring.</p>
+                    <p>Key responsibilities included:</p>
+                    <ul>
+                        <li>Conducting vulnerability scans using industry-standard tools</li>
+                        <li>Assisting in penetration testing exercises</li>
+                        <li>Analyzing security logs for potential threats</li>
+                        <li>Participating in security awareness training sessions</li>
+                    </ul>
+                    
+                    
+                </div>
+                <div class="internship">
+                    <div class="internship-img">
+                        <img src="gokboru.jpeg" alt="Cybersecurity Internship">
+                    </div>
+                    <div class="internship-details">
+                        <h3>Cloud Computing Summer Training</h3>
+                        <span class="company">Gokboru Tech Pvt Ltd.</span>
+                        <p>During my 7week summer training at Gokboru Tech, I gained hands-on experience in various AWS domains including AWS lex, lambda, cloud watch etc.</p>
+                        <p>Key responsibilities included:</p>
+                        <ul>
+                            <li>Hands-on experience with EC2, S3, and Lambda.</li>
+                            <li>Designed scalable cloud architectures</li>
+                            <li>Implemented security best practices for AWS.</li>
+                           
+                        </ul>
+                        
+                        
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2> Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="sum.jpeg" alt="Network Scanner">
+                    </div>
+                    <div class="project-info">
+                        <h3>SumUp: AI PDF Summarizer, Visuals & Chatbot (AWS)
+
+                        </h3>
+                        <p>Uses AWS to summarize PDFs, generate visuals, and deliver instant voice-enabled responses through an AI chatbot, enhancing user experience.</p>
+                        
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="password.png" alt="Password Manager">
+                    </div>
+                    <div class="project-info">
+                        <h3>Test Passwaord Strength</h3>
+                        <p>Developed a tool to check password strength, tested it with brute force and dictionary attacks, and compared SHA-256 and bcrypt for secure storage.</p>
+                        
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="bot.jpeg" alt="Web App Security">
+                    </div>
+                    <div class="project-info">
+                        <h3>Hotel Booking Chat-Bot</h3>
+                        <p>Automated hotel bookings using Amazon Lex for NLP, integrated AWS Lambda for backend tasks, and improved user experience with real-time responses.</p>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-title">
+                <h2>Certifications</h2>
+            </div>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="certification-img">
+                        <img src="ehe (2).jpeg" alt="Certification 1">
+                    </div>
+                    <div class="certification-info">
+                        <h3>Ethical Hacking Essentials (EHE)</h3>
+                        <p>Coursera | 2024</p>
+                        <p>Mastered ethical hacking basics, analyzed vulnerabilities, and applied techniques to strengthen system security defenses.</p>
+                        
+                    </div>
+                </div>
+                <div class="certification-card">
+                    <div class="certification-img">
+                        <img src="linux.jpeg" alt="Certification 2">
+                    </div>
+                    <div class="certification-info">
+                        <h3>CompTIA Linux+ XKO-005</h3>
+                        <p>Cybrary | 2024</p>
+                        <p>Demonstrated hands-on experience with Linux system administration, including user management and process control.</p>
+                        
+                    </div>
+                </div>
+                <div class="certification-card">
+                    <div class="certification-img">
+                        <img src="nptel.jpeg" alt="Certification 3">
+                    </div>
+                    <div class="certification-info">
+                        <h3>Cloud Computing</h3>
+                        <p>NPTEL | 2024</p>
+                        <p>Improved system performance and reliability by automating deployments, reducing downtime, and optimizing resource utilization in cloud.</p>
+                    
+                    </div>
+                </div>
+                <div class="certification-card">
+                    <div class="certification-img">
+                        <img src="bits.jpeg" alt="Certification 4">
+                    </div>
+                    <div class="certification-info">
+                        <h3>The Bits and Bytes of Computer Networking</h3>
+                        <p>Coursera | 2023</p>
+                        <p>Learned networking fundamentals, explored protocols, configured networks, and analyzed data transmission across layered architectures.</p>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <div class="section-title">
+                <h2>Achievements</h2>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="certification-img">
+                        <img src="cyber-threat-management.png" alt="Certification 4">
+                    </div>
+                    <h3>Cyber Threat Management Badge - Cisco</h3>
+                    <p>Gained a badge from Cisco after completing the cisco course</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="certification-img">
+                        <img src="https://tryhackme.com/img/favicon.png" alt="Certification 4">
+                    </div>
+                    <h3>Top 5% in TryHackMe</h3>
+                    <p>Ranked in the top 5% of users on TryHackMe platform for completing numerous cybersecurity challenges and rooms.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="certification-img">
+                        <img src="cyber forage.jpeg" alt="Certification 4">
+                    </div>
+                    <h3>Cybersecurity Analyst Job Simulation</h3>
+                    <p>Identity and access management (IAM) fundamentals, IAM strategy assessment, Crafting custom IAM solutions, Platform integration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Me</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>vanshikagill1810@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 8219678136</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Dalhousie,India</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/Vanshika1810" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/vanshika-gill/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/Vanshika1810" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/vanshika-gill/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                
+            </div>
+            <p>&copy;  Vanshika</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script>
+      
